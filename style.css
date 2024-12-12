@@ -1,0 +1,269 @@
+*{
+    border: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fafafa;
+    height: 100vh;
+    padding-top: 2%;
+}
+
+main {
+    main {
+        height: 100vh;
+        margin: auto;
+        max-width: 935px;
+    
+        /* Add Flexbox properties for centering */
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+a { text-decoration: none; }
+h1 { margin: 20px 0; }
+ul { list-style: none; }
+
+/**
+ * Flex rules
+ */
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.direction-column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.justify-content-center {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.align-items-center {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/**
+ *
+ */
+
+.panel {
+    background-color: white;
+    border: 0.2px solid #dbdbdb;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#auth { max-width: 350px; }
+#mobile { max-width: 454px; }
+
+#mobile img {
+    height: 618px;
+}
+
+/**
+ * Login section
+ */
+.login-with-fb,
+form { width: 100%; }
+
+.register,
+form { padding: 30px 20px; }
+
+.login-with-fb { padding: 30px 20px 20px 20px; }
+
+form .sr-only { display: none; }
+
+form input {
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #808080;
+    margin-bottom: 8px;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+form input::placeholder {
+    color: #808080;
+}
+
+form input:focus {
+    border: 1px solid #808080;
+    outline: none;
+}
+
+form button {
+    background-color: #5dbcfc;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    height: 35px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/**
+ * Separator login form from login with fb
+ */
+.separator span {
+    background-color: #dbdbdb;
+    height: 1px;
+    width: calc(100% - 10px);
+}
+
+.separator .or {
+    color: #808080;
+    font-weight: bold;
+}
+
+.separator { padding: 0 20px; }
+.separator span:first-child { margin-right: 10px;}
+.separator span:last-child { margin-left: 10px;}
+
+/**
+ * Login with fb section
+ */
+.login-with-fb a { 
+    color: #385185; 
+}
+
+.login-with-fb > a { font-size: 14px; }
+.login-with-fb div a { font-size: 14px; }
+.login-with-fb div { margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px; }
+.login-with-fb img{
+    width: 18px;
+    height: 18px;
+}
+
+/**
+ * Register section
+ */
+.register * { font-size: 14px; }
+.register a { 
+    color: #5dbcfc;
+    font-weight: bold;
+}
+
+.register p { margin-right: 5px; }
+
+/**
+ * App download
+ */
+.app-download { padding: 15px; }
+.app-download p { padding: 10px 0; }
+.app-download img { 
+    height: 40px; 
+    margin: 0 5px;
+}
+
+/**
+ * Footer
+ */
+footer {
+    margin: 0 auto 30px auto;
+    max-width: 935px;
+}
+footer ul { margin-bottom: 20px; }
+footer ul li { margin: 0 10px 10px; display: flex; flex-wrap: nowrap;} 
+footer ul li a { color: #808080; font-size: 0.8rem;  }
+footer .copyright { color: #808080; padding-bottom: 20px; }
+footer ul li a,
+footer .copyright { 
+    font-size: 0.8rem;;
+    text-align: center;
+ }
+
+
+/**
+ * Media queries
+ */
+
+ 
+ @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Dark background color */
+        color: #e0e0e0; /* White text */
+    }
+
+    .panel {
+        background-color: #1e1e1e; /* Darker panel background */
+    }
+
+    h1 {
+        background-color: #1e1e1e; /* Darker background for the Instagram header */
+    }
+
+    h1 img {
+        content: url('./img/instagram-logo-dark.png'); /* Use dark version of the logo */
+    }
+
+    .input, input {
+        background-color: #333; /* Dark input field */
+        color: #e0e0e0; /* White text in input fields */
+    }
+
+    .input::placeholder, input::placeholder {
+        color: #bbb; /* Light placeholder text */
+    }
+
+    .separator .or {
+        color: #ccc; /* Lighter "OR" text */
+    }
+
+    footer {
+        color: #bbb; /* Lighter footer text */
+    }
+
+    footer a {
+        color: #6200ea; /* Purple links in footer */
+    }
+}
+ @media screen and (max-width: 767px) {
+    main {
+        margin: 30px auto 50px auto;
+        padding-top: 20px; /* Add padding on top of the box */
+    }
+
+    footer .copyright,
+    footer ul li a {
+        font-size: 13px;
+    }
+}
+
+
