@@ -17,8 +17,9 @@ main {
         height: 100vh;
         margin: auto;
         max-width: 935px;
+        margin-top: 60px;
     
-        /* Add Flexbox properties for centering */
+        
         
         display: flex;
         justify-content: center;
@@ -31,9 +32,7 @@ a { text-decoration: none; }
 h1 { margin: 20px 0; }
 ul { list-style: none; }
 
-/**
- * Flex rules
- */
+
 
 .flex {
     display: -webkit-box;
@@ -75,15 +74,14 @@ ul { list-style: none; }
     flex-wrap: wrap;
 }
 
-/**
- *
- */
+
 
 .panel {
     background-color: white;
     border: 0.2px solid #dbdbdb;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 25px;
+    
 }
 
 #auth { max-width: 350px; }
@@ -93,9 +91,8 @@ ul { list-style: none; }
     height: 618px;
 }
 
-/**
- * Login section
- */
+
+
 .login-with-fb,
 form { width: 100%; }
 
@@ -121,7 +118,7 @@ form input::placeholder {
 }
 
 form input:focus {
-    border: 1px solid #808080;
+    border: 1px solid #656565;
     outline: none;
 }
 
@@ -135,9 +132,7 @@ form button {
     width: 100%;
 }
 
-/**
- * Separator login form from login with fb
- */
+
 .separator span {
     background-color: #dbdbdb;
     height: 1px;
@@ -153,9 +148,7 @@ form button {
 .separator span:first-child { margin-right: 10px;}
 .separator span:last-child { margin-left: 10px;}
 
-/**
- * Login with fb section
- */
+
 .login-with-fb a { 
     color: #385185; 
 }
@@ -171,9 +164,7 @@ form button {
     height: 18px;
 }
 
-/**
- * Register section
- */
+
 .register * { font-size: 14px; }
 .register a { 
     color: #5dbcfc;
@@ -182,9 +173,7 @@ form button {
 
 .register p { margin-right: 5px; }
 
-/**
- * App download
- */
+
 .app-download { padding: 15px; }
 .app-download p { padding: 10px 0; }
 .app-download img { 
@@ -192,9 +181,7 @@ form button {
     margin: 0 5px;
 }
 
-/**
- * Footer
- */
+
 footer {
     margin: 0 auto 30px auto;
     max-width: 935px;
@@ -210,54 +197,10 @@ footer .copyright {
  }
 
 
-/**
- * Media queries
- */
-
- 
- @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212; /* Dark background color */
-        color: #e0e0e0; /* White text */
-    }
-
-    .panel {
-        background-color: #1e1e1e; /* Darker panel background */
-    }
-
-    h1 {
-        background-color: #1e1e1e; /* Darker background for the Instagram header */
-    }
-
-    h1 img {
-        content: url('./img/instagram-logo-dark.png'); /* Use dark version of the logo */
-    }
-
-    .input, input {
-        background-color: #333; /* Dark input field */
-        color: #e0e0e0; /* White text in input fields */
-    }
-
-    .input::placeholder, input::placeholder {
-        color: #bbb; /* Light placeholder text */
-    }
-
-    .separator .or {
-        color: #ccc; /* Lighter "OR" text */
-    }
-
-    footer {
-        color: #bbb; /* Lighter footer text */
-    }
-
-    footer a {
-        color: #6200ea; /* Purple links in footer */
-    }
-}
  @media screen and (max-width: 767px) {
     main {
         margin: 30px auto 50px auto;
-        padding-top: 20px; /* Add padding on top of the box */
+        padding-top: 20px; 
     }
 
     footer .copyright,
