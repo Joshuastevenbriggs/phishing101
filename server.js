@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.post("/login", (req, res) => {
     console.log("Form Submission:");
-    console.log("Email:", req.body.email);
+    console.log("Username:", req.body.email);
     console.log("Password:", req.body.password);
     res.send("Form data received successfully!");
 });

