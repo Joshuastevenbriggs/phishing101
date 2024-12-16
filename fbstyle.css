@@ -8,10 +8,11 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
     color: #1c1e21;
+    overflow-x: hidden;
 }
 
 main {
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
     position: relative;
     margin: 0 auto;
@@ -24,68 +25,74 @@ footer {
 
 .row {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center items horizontally */
     width: 100%;
-    max-width: 1000px;
+    max-width: 1500px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;     /* Center text for stacked elements */
 }
 
 .col-logo {
-    flex: 0 0 50%;
-    text-align: left;
-}
-
-.col-form {
-    flex: 0 0 40%;
-    text-align: center;
+    padding: 0;
+    margin-bottom: 5px;
 }
 
 .col-logo img {
-    max-width: 300px;
+    max-width: 200px;
+    
 }
 
-.col-logo h2 {
-    font: 26px;
+.col-form .form h4{
     font-weight: 400;
-    padding: 0 30px;
-    line-height: 32px;
+    font-size: large;
+    padding-bottom: 15px;
+    font-family: sans-serif;
 }
 
-.col-form .form-container {
+.col-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.col-form .form {
     background-color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
-    padding: 20px;
-    max-width: 400px;
+   
+    padding:40px;
+     /* Increase padding for height */
+    height: 400px;
+
 }
 
-.col-form .form-container input, .col-form .form-container .btn-login {
+.col-form .form input,
+.col-form .form .btn-login {
     width: 100%;
     margin: 5px 0;
     height: 45px;
-    vertical-align: middle;
     font-size: 16px;
 }
 
-.col-form .form-container input {
+.col-form .form input {
     border: 1px solid #dddfe2;
+    border-radius: 6px;
     color: #1d2129;
     padding: 0 8px;
     outline: none;
 }
 
-.col-form .form-container input:focus {
+.col-form .form input:focus {
     border-color: #1877f2;
     box-shadow: 0 0 0 2px #e7f3ff;
 }
 
-.col-form .form-container .btn-login {
+.col-form .form .btn-login {
     background-color: #1877f2;
     border: none;
     border-radius: 6px;
@@ -95,7 +102,7 @@ footer {
     font-weight: 700;
 }
 
-.col-form .form-container a {
+.col-form .form a {
     display: block;
     color: #1877f2;
     font-size: 14px;
@@ -104,11 +111,11 @@ footer {
     border-bottom: 1px solid #dadde1;
 }
 
-.col-form .form-container a:hover {
+.col-form .form a:hover {
     text-decoration: underline;
 }
 
-.col-form .form-container .btn-new {
+.col-form .form .btn-new {
     background-color: #42b72a;
     border: none;
     border-radius: 6px;
@@ -121,23 +128,23 @@ footer {
 }
 
 .col-form p {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .col-form p a {
     text-decoration: none;
     color: #1c1e21;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .col-form p a:hover {
     text-decoration: underline;
 }
 
-.footer-contents {
-    position: relative;
+footer .footer-contents {
     max-width: 1000px;
     margin: 0 auto;
+    padding-top: 70px;
 }
 
 footer ol {
@@ -154,7 +161,6 @@ footer ol:first-child {
 footer ol:first-child li:last-child button {
     background-color: #f5f6f7;
     border: 1px solid #ccd0d5;
-    outline: none;
     color: #4b4f56;
     padding: 0 8px;
     font-weight: 700;
@@ -164,12 +170,12 @@ footer ol:first-child li:last-child button {
 footer ol li {
     padding-right: 15px;
     font-size: 12px;
-    color: #385898;
+    color: #4b4f56;
 }
 
 footer ol li a {
     text-decoration: none;
-    color: #385898;
+    color: #5d6167;
 }
 
 footer ol li a:hover {
@@ -178,4 +184,5 @@ footer ol li a:hover {
 
 footer small {
     font-size: 11px;
+    color: #4b4f56;
 }
